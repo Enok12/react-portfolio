@@ -29,7 +29,7 @@ const Contact = () => {
             <AiOutlineMail className='contact__option-icon'/>
               <h4>Email</h4>
               <h5>enokdilshan115@gmail.com</h5>
-              <a href="mailto:enokdilshan115@gmail.com" target='_blank'>Send a Message</a>
+              <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=GTvVlcSBmzhJBCFbjHPhTztQBflJcLfqtHBvbBKXJzfWrftwhSZGPfjmxtGfFqDNtpmkTLTFXSwJB" target='_blank'>Send a Message</a>
 
           </article>
 
@@ -45,7 +45,7 @@ const Contact = () => {
             <AiOutlineWhatsApp className='contact__option-icon'/>
               <h4>Whatsapp</h4>
               <h5>+940773561146</h5>
-              <a href="https://api.whatsapp.com/send?phone=94773561146" target='_blank'>Send a Message</a>
+              <a href="https://wa.me/0094773561146" target='_blank'>Send a Message</a>
 
           </article>
         </div>

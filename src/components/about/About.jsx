@@ -42,9 +42,7 @@ const About = () => {
             </article>
 
           </div>
-          <p>ahsbdkjasdgasdhasd aslbd hbdsakdbsad hadbd hbds dabdal dbasdlsabd asldbasdasbasdhas adb adlsabd sadas
-            asodh asid haildh iashdiashdasid hasihd asli dhasdsaid halsidshd aislhd ald
-            asdoh aslidh asidhasild hsadasildhas dliashdh aasi dhasldh 
+          <p>Well-versed in technology and writing code to create reliable and user-friendly systems. Confident communicator, strategic thinker, and innovative creator to develop software that is customized to meet a company’s organizational needs, highlight its core competencies, and further its success. 
           </p>
 
           <a href="#contact" className='btn btn-primary'>Let's Talk</a>

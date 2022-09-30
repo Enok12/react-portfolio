@@ -13,24 +13,13 @@ const Services = () => {
       <div className='container services__container'>
         <article className="service">
           <div className="service__head">
-            <h3>UI/UX Design</h3>
+            <h3>Desktop Application Develpment</h3>
           </div>
           <ul className="service__list">
             <li><GiCheckMark className='service__list-icon'/>
-            <p>Testing Testing Testing Testing Testing Testing  </p>
+            <p>I have experience in developing desktop applications with Java and c#</p>
             </li>
-            <li><GiCheckMark className='service__list-icon'/>
-            <p>Testing Testing Testing Testing Testing Testing  </p>
-            </li>
-            <li><GiCheckMark className='service__list-icon'/>
-            <p>Testing Testing Testing Testing Testing Testing  </p>
-            </li>
-            <li><GiCheckMark className='service__list-icon'/>
-            <p>Testing Testing Testing Testing Testing Testing  </p>
-            </li>
-            <li><GiCheckMark className='service__list-icon'/>
-            <p>Testing Testing Testing Testing Testing Testing  </p>
-            </li>
+            
           </ul>
         </article>
 
@@ -40,42 +29,22 @@ const Services = () => {
           </div>
           <ul className="service__list">
             <li><GiCheckMark className='service__list-icon'/>
-            <p>Testing Testing Testing Testing Testing Testing  </p>
+            <p>I develop web applications with front end technologies such as VueJS, ReactJS and back end technologies such as Laravel, Express etc....</p>
             </li>
-            <li><GiCheckMark className='service__list-icon'/>
-            <p>Testing Testing Testing Testing Testing Testing  </p>
-            </li>
-            <li><GiCheckMark className='service__list-icon'/>
-            <p>Testing Testing Testing Testing Testing Testing  </p>
-            </li>
-            <li><GiCheckMark className='service__list-icon'/>
-            <p>Testing Testing Testing Testing Testing Testing  </p>
-            </li>
-            <li><GiCheckMark className='service__list-icon'/>
-            <p>Testing Testing Testing Testing Testing Testing  </p>
-            </li>
+
           </ul>
         </article>
 
         <article className="service">
           <div className="service__head">
-            <h3>Graphic Content</h3>
+            <h3>Graphic Desisgn</h3>
           </div>
           <ul className="service__list">
             <li><GiCheckMark className='service__list-icon'/>
-            <p>Testing Testing Testing Testing Testing Testing  </p>
+            <p>Adobe Photoshop  </p>
             </li>
             <li><GiCheckMark className='service__list-icon'/>
-            <p>Testing Testing Testing Testing Testing Testing  </p>
-            </li>
-            <li><GiCheckMark className='service__list-icon'/>
-            <p>Testing Testing Testing Testing Testing Testing  </p>
-            </li>
-            <li><GiCheckMark className='service__list-icon'/>
-            <p>Testing Testing Testing Testing Testing Testing  </p>
-            </li>
-            <li><GiCheckMark className='service__list-icon'/>
-            <p>Testing Testing Testing Testing Testing Testing  </p>
+            <p>Adobe Illustrator  </p>
             </li>
           </ul>
         </article>

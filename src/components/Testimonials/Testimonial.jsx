@@ -17,13 +17,23 @@ import "swiper/css/pagination";
 const data = [
   {
     avatar: AVT1,
-    name: 'NAME1',
-    review: 'Testing Testing Testing TestingTesting Testing TestingTestingTestingTesting Testing TestingTestingTestingTestingTestingTestingTestingTesting Testing TestingTestingTesting Testing Testing Testing Testing Testing '
+    name: 'Shemalka Nishen',
+    review: 'Great service man I got more than I was expecting and it was such a good website to use for my business! Definitely impressed with the content that I paid for and definitely will go back to him whenever I need a website made. '
   },
   {
     avatar: AVT2,
-    name: 'NAME2',
-    review: 'Testing Testing Testing TestingTesting Testing TestingTestingTestingTesting Testing TestingTestingTestingTestingTestingTestingTestingTesting Testing TestingTestingTesting Testing Testing Testing Testing Testing '
+    name: 'Samdani Pasanya',
+    review: 'Enok was exceptional throughout the entire process. He was responsive, direct, professional, and helpful. He over-delivered early. I would definitely recommend Enok if this is your first website build. Enok walks you through and communicates exactly what he needs to complete the project! '
+  },
+  {
+    avatar: AVT3,
+    name: 'Nalinda Dilshan',
+    review: 'Very thorough in his replies and explanations. Not afraid to ask for everything and go above and beyond.'
+  },
+  {
+    avatar: AVT4,
+    name: 'Steve Mel',
+    review: 'Martin was amazing. Was very responsive and quick with any revisions we wanted. He also is very knowledgeable about what he does and gave me a lot of great information. Will definitely use in the future. Amazing!!'
   }
 ]
 

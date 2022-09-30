@@ -11,14 +11,42 @@ const data = [
   {
     id: 1,
     image: IMG1,
-    title: 'TESTING1',
-    github: 'https//github.com',
+    title: 'React Portfolio Project',
+    github: '',
     demo: ''
   },
   {
     id: 2,
     image: IMG2,
-    title: 'TESTING2',
+    title: 'Inventory System (Laravel, Vue, REST API)',
+    github: 'https//github.com',
+    demo: ''
+  },
+  {
+    id: 3,
+    image: IMG2,
+    title: 'Facebook Clone (Laravel, Vue, Tailwind)',
+    github: 'https//github.com',
+    demo: ''
+  },
+  {
+    id: 4,
+    image: IMG2,
+    title: 'Dilshan Bookshop Project (Core PHP)',
+    github: 'https//github.com',
+    demo: ''
+  },
+  {
+    id: 5,
+    image: IMG2,
+    title: 'My Bags Frontend Project (React, Material UI)',
+    github: 'https//github.com',
+    demo: ''
+  },
+  {
+    id: 6,
+    image: IMG2,
+    title: 'Event Management System (C#,.NET)',
     github: 'https//github.com',
     demo: ''
   }
