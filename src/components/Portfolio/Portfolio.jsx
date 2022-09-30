@@ -47,14 +47,14 @@ const data = [
     id: 6,
     image: IMG2,
     title: 'Event Management System (C#,.NET)',
-    github: 'https//github.com',
+    github: 'https://github.com/Enok12/Event-management-system-C-.NET',
   
   },
   {
     id: 6,
     image: IMG2,
     title: 'Salary Management System (Java)',
-    github: '',
+    github: 'https://github.com/Enok12/salary-management-system-java',
    
   }
 ]
