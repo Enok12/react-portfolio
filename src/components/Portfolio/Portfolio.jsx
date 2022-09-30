@@ -1,11 +1,10 @@
 import React from 'react'
 import './portfolio.css'
 import IMG1 from '../../assets/portfolio1.jpg'
-import IMG2 from '../../assets/portfolio1.jpg'
-import IMG3 from '../../assets/portfolio1.jpg'
-import IMG4 from '../../assets/portfolio1.jpg'
-import IMG5 from '../../assets/portfolio1.jpg'
-import IMG6 from '../../assets/portfolio1.jpg'
+import IMG2 from '../../assets/portfolio2.jpg'
+import IMG3 from '../../assets/portfolio3.jpg'
+import IMG4 from '../../assets/portfolio4.jpg'
+
 
 const data = [
   {
@@ -24,14 +23,14 @@ const data = [
   },
   {
     id: 3,
-    image: IMG2,
+    image: IMG3,
     title: 'Facebook Clone (Laravel, Vue, Tailwind)',
     github: 'https://github.com/Enok12/laravel-facebook_clone',
     demo: ''
   },
   {
     id: 4,
-    image: IMG2,
+    image: IMG4,
     title: 'Dilshan Bookshop Project (Core PHP)',
     github: 'https://github.com/Enok12/dilshan-bookshop-project',
     demo: ''
