@@ -12,28 +12,28 @@ const data = [
     id: 1,
     image: IMG1,
     title: 'React Portfolio Project',
-    github: '',
+    github: 'https://github.com/Enok12/react-portfolio',
     demo: ''
   },
   {
     id: 2,
     image: IMG2,
     title: 'Inventory System (Laravel, Vue, REST API)',
-    github: 'https//github.com',
+    github: 'https://github.com/Enok12/inventory-system-vue-laravel',
     demo: ''
   },
   {
     id: 3,
     image: IMG2,
     title: 'Facebook Clone (Laravel, Vue, Tailwind)',
-    github: 'https//github.com',
+    github: 'https://github.com/Enok12/laravel-facebook_clone',
     demo: ''
   },
   {
     id: 4,
     image: IMG2,
     title: 'Dilshan Bookshop Project (Core PHP)',
-    github: 'https//github.com',
+    github: 'https://github.com/Enok12/dilshan-bookshop-project',
     demo: ''
   },
   {
@@ -41,14 +41,21 @@ const data = [
     image: IMG2,
     title: 'My Bags Frontend Project (React, Material UI)',
     github: 'https//github.com',
-    demo: ''
+  
   },
   {
     id: 6,
     image: IMG2,
     title: 'Event Management System (C#,.NET)',
     github: 'https//github.com',
-    demo: ''
+  
+  },
+  {
+    id: 6,
+    image: IMG2,
+    title: 'Salary Management System (Java)',
+    github: '',
+   
   }
 ]
 const Portfolio = () => {
@@ -69,7 +76,7 @@ const Portfolio = () => {
                 <h3>{title}</h3>
                 <div className="portfolio__item-cta">
                   <a href={github} className='btn' target='_blank'>Github</a>
-                  <a href={demo} className='btn btn-primary' target='_blank'>Live Demo</a>
+                  {/* <a href={demo} className='btn btn-primary' target='_blank'>Live Demo</a> */}
                 </div>
               </article>
             )

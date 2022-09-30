@@ -13,8 +13,9 @@
 }
 
 .portfolio__item:hover{
-    border-color: var(--color-primary-varient);
-    background: transparent;
+    /* border-color: var(--color-primary-varient);
+    background: transparent; */
+    transform: scale(1.05);
 }
 
 .portfolio__item-image{
@@ -38,6 +39,11 @@
         grid-template-columns: 1fr 1fr;
         gap: 1.2rem;
     }
+    .portfolio__item:hover{
+        /* border-color: var(--color-primary-varient);
+        background: transparent; */
+        transform: scale(1);
+    }
 }
 
 /* ======================== MEDIA QUERIES (SMALL DEVICES) ================ */
@@ -45,5 +51,10 @@
     .portfolio__container{
         grid-template-columns: 1fr;
         gap: 1rem;
+    }
+    .portfolio__item:hover{
+        /* border-color: var(--color-primary-varient);
+        background: transparent; */
+        transform: scale(1);
     }
 }
