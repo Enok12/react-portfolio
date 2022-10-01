@@ -33,7 +33,7 @@ const data = [
   {
     avatar: AVT4,
     name: 'Steve Mel',
-    review: 'Martin was amazing. Was very responsive and quick with any revisions we wanted. He also is very knowledgeable about what he does and gave me a lot of great information. Will definitely use in the future. Amazing!!'
+    review: 'Enok was amazing. Was very responsive and quick with any revisions we wanted. He also is very knowledgeable about what he does and gave me a lot of great information. Will definitely use in the future. Amazing!!'
   }
 ]
 
