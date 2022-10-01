@@ -29,7 +29,7 @@ const Contact = () => {
             <AiOutlineMail className='contact__option-icon'/>
               <h4>Email</h4>
               <h5>enokdilshan115@gmail.com</h5>
-              <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=GTvVlcSBmzhJBCFbjHPhTztQBflJcLfqtHBvbBKXJzfWrftwhSZGPfjmxtGfFqDNtpmkTLTFXSwJB" target='_blank'>Send a Message</a>
+              <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=CllgCHrgmQLXRZwfrVlnLXKFzjlcDXCrDTwMdSJQVqkrbRZwLQngwZnrJbcxPfRFnPtsWVKdckL" target='_blank'>Send a Message</a>
 
           </article>
 
