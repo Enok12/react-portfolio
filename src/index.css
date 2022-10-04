@@ -24,10 +24,15 @@
   --container-width-md : 86%;
   --container-width-sm : 90%;
 
+  --custom-cursor : url('/src/assets/Cursor.png'),pointer ;
+  --custom-cursor2 : url('/src/assets/Cursor2.png'),pointer ;
+
+
 }
 
 html{
   scroll-behavior: smooth;
+  cursor:var(--custom-cursor)
 }
 
 ::-webkit-scrollbar{
@@ -40,7 +45,6 @@ body{
   color: var(--color-white);
   line-height: 1.7;
   background-image:url("assets/bg-texture.png") ;
-  
 }
 
 /* ================== GENERAL STYLES======================= */
@@ -48,6 +52,7 @@ body{
 .container{
   width: var(--container-width-lg);
   margin: 0 auto;
+  
 }
 
 h1,h2,h3,h4,h5{
@@ -60,6 +65,7 @@ h1{
 
 section{
   margin-top: 8rem;
+  
 }
 
 section > h2, section >h5 {
@@ -79,6 +85,8 @@ section > h2{
 a{
   color: var(--color-primary);
   transition: var(--transition);
+  cursor: var(--custom-cursor2);
+
 }
 
 a:hover{
@@ -91,7 +99,7 @@ a:hover{
   color: var(--color-primary);
   padding: 0.75rem 1.2rem ;
   border-radius: 0.4rem;
-  cursor: pointer;
+  cursor: var(--custom-cursor2);
   border: 1px solid var(--color-primary);
   transition: var(--transition);
 }
@@ -100,6 +108,7 @@ a:hover{
   background: var(--color-white);
   color: var(--color-bg);
   border-color: transparent;
+
 }
 
 .btn-primary{
