@@ -41,6 +41,7 @@
 
 }
 
+
 /* ======================== MEDIA QUERIES (MEDIUM DEVICES) ================ */
 @media screen and (max-width:1024px) {
     .experience__container{
@@ -69,3 +70,4 @@
         padding: 2rem 1rem;
     }
 }
+
