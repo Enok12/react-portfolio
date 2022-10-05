@@ -10,7 +10,27 @@ import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 
 // import required modules
-import { EffectCoverflow, Pagination,Mousewheel,Autoplay } from "swiper";
+import { EffectCoverflow, Pagination, Mousewheel, Autoplay } from "swiper";
+
+//import logos
+
+import LOGO1 from '../../assets/Language/HTML.jpg'
+import LOGO2 from '../../assets/Language/Java.jpg'
+import LOGO3 from '../../assets/Language/Javascript.jpg'
+import LOGO4 from '../../assets/Language/Vue.jpg'
+import LOGO5 from '../../assets/Language/React.jpg'
+import LOGO6 from '../../assets/Language/Wordpress.jpg'
+import LOGO7 from '../../assets/Language/Bootstrap.jpg'
+import LOGO8 from '../../assets/Language/Tailwind CSS.jpg'
+import LOGO9 from '../../assets/Language/MUI.jpg'
+import LOGO10 from '../../assets/Language/PHP.jpg'
+import LOGO11 from '../../assets/Language/Laravel.jpg'
+import LOGO12 from '../../assets/Language/Node JS.jpg'
+import LOGO13 from '../../assets/Language/Express.jpg'
+import LOGO14 from '../../assets/Language/SQL.jpg'
+import LOGO15 from '../../assets/Language/c++.jpg'
+
+
 
 const frontend_data = [
   {
@@ -92,6 +112,25 @@ const backend_data = [
 
 
 ]
+
+
+const logoData = [
+  { image: LOGO1 },
+  { image: LOGO2 },
+  { image: LOGO3 },
+  { image: LOGO4 },
+  { image: LOGO5 },
+  { image: LOGO6 },
+  { image: LOGO7 },
+  { image: LOGO8 },
+  { image: LOGO9 },
+  { image: LOGO10 },
+  { image: LOGO11 },
+  { image: LOGO12 },
+  { image: LOGO13 },
+  { image: LOGO14 },
+  { image: LOGO15 }
+]
 const Experience = () => {
   return (
     <section id='experience' >
@@ -146,57 +185,53 @@ const Experience = () => {
         </div>
       </div>
 
-      <div>
-      <Swiper
-        effect={"coverflow"}
-        centeredSlides={true}
-        slidesPerView={5}
-        loop={true}
-        // mousewheel={true}
-        coverflowEffect={{
-          rotate: 50,
-          stretch: 0,
-          depth: 100,
-          modifier: 1,
-          slideShadows: true,
-        }}
-        autoplay={{
-          delay: 950,
-          disableOnInteraction: false,
-        }}
-       
-        pagination={true}
-        modules={[EffectCoverflow, Pagination,Mousewheel,Autoplay]}
-        className="mySwiper"
-      >
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-5.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-6.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-7.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-8.jpg" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src="https://swiperjs.com/demos/images/nature-9.jpg" />
-        </SwiperSlide>
-      </Swiper>
+      <div className='container logo-swiper'>
+        <Swiper
+          effect={"coverflow"}
+          centeredSlides={true}
+          loop={true}
+          breakpoints={{
+            // when window width is >= 640px
+            640: {
+              slidesPerView: 3,
+            },
+            // when window width is >= 768px
+            768: {
+              slidesPerView: 5,
+            },
+          }}
+          // mousewheel={true}
+          coverflowEffect={{
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+          }}
+          autoplay={{
+            delay: 950,
+            disableOnInteraction: false,
+          }}
+          
+          
+
+          modules={[EffectCoverflow, Pagination, Mousewheel, Autoplay]}
+          className="mySwiper"
+        >
+
+          {
+            logoData.map(({ image }, index) => {
+              return (
+                <SwiperSlide key = {index}>
+                  <img src = {image} className="logo-swiper__image" />
+                </SwiperSlide>
+              )
+            })
+          }
+
+                
+
+        </Swiper>
       </div>
     </section>
   )

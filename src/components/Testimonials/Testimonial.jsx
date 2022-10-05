@@ -7,6 +7,8 @@ import AVT4 from '../../assets/avatar4.jpg'
 
 import {Pagination} from 'swiper'
 import {Swiper,SwiperSlide} from 'swiper/react'
+import { Autoplay } from "swiper";
+
 
 // Import Swiper styles
 import 'swiper/css';
@@ -44,10 +46,15 @@ const Testimonial = () => {
       <h2>Testimonials</h2>
 
       <Swiper className="container testimonials_container"
-      modules={[Pagination]}
+      modules={[Pagination,Autoplay]}
       spaceBetween={40}
+      loop={true}
       slidesPerView={1}
       pagination={{ clickable:true }}
+      autoplay={{
+        delay: 2500,
+        disableOnInteraction: false,
+      }}
   
       >
 

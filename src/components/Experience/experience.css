@@ -41,6 +41,15 @@
 
 }
 
+.logo-swiper{
+    margin-top: 50px;
+}
+
+.logo-swiper__image{
+    border-radius: 3rem;
+}
+
+
 
 /* ======================== MEDIA QUERIES (MEDIUM DEVICES) ================ */
 @media screen and (max-width:1024px) {
