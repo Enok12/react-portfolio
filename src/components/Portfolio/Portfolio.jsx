@@ -10,13 +10,26 @@ import IMG7 from '../../assets/portfolio7.webp'
 import Modal from 'react-modal'
 
 const customStyles = {
+  overlay:{
+    zIndex :1020,
+    backgroundColor: 'rgba(44, 44, 108,0.75)',
+    backdropFilter: 'blur(5px)',
+    overflow: 'hidden',
+
+  },
   content: {
     top: '50%',
     left: '50%',
     right: 'auto',
     bottom: 'auto',
-    marginRight: '-50%',
+    marginRight: '-15%',
     transform: 'translate(-50%, -50%)',
+    borderRadius : '2rem',
+    background:'#2c2c6c',
+    boxShadow:
+    `rgba(22, 31, 39, 0.42) 0px 60px 123px -25px,
+    rgba(19, 26, 32, 0.08) 0px 35px 75px -35px`
+    
   },
 };
 
@@ -26,7 +39,7 @@ const data = [
   {
     id: 1,
     image: IMG1,
-    title: 'React Portfolio Project',
+    title: 'React Portfolio Project (React JS, CSS)',
     github: 'https://github.com/Enok12/react-portfolio',
     desc: 'Check out my Portfolio Project which is one the First React Projects developed by me. This project will showcase about Myself, Skills and Experience. As technologies React, SwiperJS and EmailJS are used along with pure CSS stylings'
   },
@@ -78,22 +91,24 @@ const data = [
 
 const Portfolio = () => {
 
-  const [modelisOpen,setmodelisOpen]= useState(false)
-  const [mdata,setmdata]= useState({id:'',image:'',title:'',github:'',desc:''})
+  const [modelisOpen, setmodelisOpen] = useState(false)
+  const [mdata, setmdata] = useState({ id: '', image: '', title: '', github: '', desc: '' })
 
 
   const ModalComponent = (data) => {
-             
-              setmodelisOpen(true);
-    
-              
-              setmdata({
-                id:data.id,
-                image:data.image,
-                title:data.title,
-                github:data.github,
-                desc:data.desc});
-              
+
+    setmodelisOpen(true);
+    setmdata({
+      id: data.id,
+      image: data.image,
+      title: data.title,
+      github: data.github,
+      desc: data.desc
+    });
+  }
+
+  const closemodal = () => {
+    setmodelisOpen(false);
   }
 
   return (
@@ -102,46 +117,61 @@ const Portfolio = () => {
       <h2>Portfolio</h2>
 
       <div className="container portfolio__container ">
-        
+
 
         {
           data.map(({ id, image, title, github, desc }) => {
             return (
               <div>
-              <article key={id} className='portfolio__item' onClick={() => ModalComponent({ id, image, title, github, desc })}>
-                <div className="portfolio__item-image">
-                  <img src={image} alt="" />
-                </div>
-                <h3>{title}</h3>
-                <div className='portfolio__item-desc'>
-                  {desc}
-                </div>
-                <div className="portfolio__item-cta">
-                  <a href={github} className='btn' target='_blank'>Github</a>
-                  {/* <a href={demo} className='btn btn-primary' target='_blank'>Live Demo</a> */}
-                </div>
-              </article>
+                <article key={id} className='portfolio__item' onClick={() => ModalComponent({ id, image, title, github, desc })}>
+                  <div className="portfolio__item-image">
+                    <img src={image} alt="" />
+                  </div>
+                  <h3>{title}</h3>
+                  <div className='portfolio__item-desc'>
+                    {desc.slice(0,150)}.......
+                  </div>
+                  <div className="portfolio__item-cta">
+                    <a href={github} className='btn' target='_blank'>Github</a>
+                    {/* <a href={demo} className='btn btn-primary' target='_blank'>Live Demo</a> */}
+                  </div>
+                </article>
 
-              
-                           
+
+
               </div>
 
 
             )
-            
+
           })
         }
 
       </div>
 
-              <Modal isOpen={modelisOpen} className="">
-              <h2 className='modal-color-text'>{mdata.title}</h2>
-              <p className='modal-color-text'>{mdata.desc}</p>
-              <button className='modal-color-button' onClick={() => setmodelisOpen(false)}>CLOSE</button>
-              </Modal>
+      <Modal isOpen={modelisOpen} className="" closeTimeoutMS={300} style={customStyles} 
+           shouldCloseOnOverlayClick={true} onRequestClose={closemodal} >
+        <h2 className='modal-color-text'>{mdata.title}</h2>
+        <div className='modal-main-container'>
+          <div className='modal-image'>
+            <img src={mdata.image} alt="" />
+          </div>
+          <div>
+            <h2 className='modal-h2'>Details :</h2>
+            <p className='modal-color-text'>{mdata.desc}</p>
+
+            <h2 className='modal-h2'>Technologies :</h2>
+            <p className='modal-color-text'>Vue JS, Laravel</p>
+          </div>
+
+        </div>
+
+      </Modal>
+
+
 
     </section>
-    
+
   )
 }
 
