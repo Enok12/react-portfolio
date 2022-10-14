@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './portfolio.css'
 import IMG1 from '../../assets/portfolio1.jpg'
 import IMG2 from '../../assets/portfolio2.jpg'
@@ -7,7 +7,18 @@ import IMG4 from '../../assets/portfolio4.jpg'
 import IMG5 from '../../assets/portfolio4.jpg'
 import IMG6 from '../../assets/portfolio6.jpg'
 import IMG7 from '../../assets/portfolio7.webp'
+import Modal from 'react-modal'
 
+const customStyles = {
+  content: {
+    top: '50%',
+    left: '50%',
+    right: 'auto',
+    bottom: 'auto',
+    marginRight: '-50%',
+    transform: 'translate(-50%, -50%)',
+  },
+};
 
 
 
@@ -45,7 +56,7 @@ const data = [
     image: IMG2,
     title: 'My Bags Frontend Project (React, Material UI)',
     github: 'https//github.com',
-    desc :'This Project is a Frontend Project developed using ReactJS and also considered as a practise project to showcase Material UI Components '
+    desc: 'This Project is a Frontend Project developed using ReactJS and also considered as a practise project to showcase Material UI Components '
 
   },
   {
@@ -53,28 +64,51 @@ const data = [
     image: IMG7,
     title: 'Event Management System (C#,.NET)',
     github: 'https://github.com/Enok12/Event-management-system-C-.NET',
-    desc :'This Project was the First C# project using .NET Framework. This desktop application has features like Creating, Editing, Updating and Deleting Events and further more...... '
+    desc: 'This Project was the First C# project using .NET Framework. This desktop application has features like Creating, Editing, Updating and Deleting Events and further more...... '
   },
   {
     id: 7,
     image: IMG6,
     title: 'Salary Management System (Java)',
     github: 'https://github.com/Enok12/salary-management-system-java',
-    desc :'This proejct was the First Java Project developed using NetBeans IDE. This Desktop Java Application Handles Employee Details and salaries and payrolls'
+    desc: 'This proejct was the First Java Project developed using NetBeans IDE. This Desktop Java Application Handles Employee Details and salaries and payrolls'
   }
 ]
+
+
 const Portfolio = () => {
+
+  const [modelisOpen,setmodelisOpen]= useState(false)
+  const [mdata,setmdata]= useState({id:'',image:'',title:'',github:'',desc:''})
+
+
+  const ModalComponent = (data) => {
+             
+              setmodelisOpen(true);
+    
+              
+              setmdata({
+                id:data.id,
+                image:data.image,
+                title:data.title,
+                github:data.github,
+                desc:data.desc});
+              
+  }
+
   return (
     <section id='portfolio'>
       <h5>My Recent Work</h5>
       <h2>Portfolio</h2>
 
       <div className="container portfolio__container ">
+        
 
         {
           data.map(({ id, image, title, github, desc }) => {
             return (
-              <article key={id} className='portfolio__item'>
+              <div>
+              <article key={id} className='portfolio__item' onClick={() => ModalComponent({ id, image, title, github, desc })}>
                 <div className="portfolio__item-image">
                   <img src={image} alt="" />
                 </div>
@@ -87,12 +121,27 @@ const Portfolio = () => {
                   {/* <a href={demo} className='btn btn-primary' target='_blank'>Live Demo</a> */}
                 </div>
               </article>
+
+              
+                           
+              </div>
+
+
             )
+            
           })
         }
 
       </div>
+
+              <Modal isOpen={modelisOpen} className="">
+              <h2 className='modal-color-text'>{mdata.title}</h2>
+              <p className='modal-color-text'>{mdata.desc}</p>
+              <button className='modal-color-button' onClick={() => setmodelisOpen(false)}>CLOSE</button>
+              </Modal>
+
     </section>
+    
   )
 }
 

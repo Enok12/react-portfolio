@@ -75,3 +75,12 @@
     }
 
 }
+
+.modal-color-text{
+    color: black;
+}
+
+.modal-color-button{
+    background: green;
+    color: black;
+}
