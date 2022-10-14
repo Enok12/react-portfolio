@@ -12,7 +12,6 @@
     transition: var(--transition);
     box-shadow: 5px 1px 40px black;
 
-  filter: blur(1px);
   opacity: 0.5;
   transition: 0.6s ease all;
  
