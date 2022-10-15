@@ -108,8 +108,6 @@ const Portfolio = () => {
 
 
   const ModalComponent = (data) => {
-
-    setmodelisOpen(true);
     setmdata({
       id: data.id,
       image: data.image,
@@ -118,6 +116,8 @@ const Portfolio = () => {
       desc: data.desc,
       techstack :data.techstack
     });
+    setmodelisOpen(true);
+    
   }
 
   const closemodal = () => {
