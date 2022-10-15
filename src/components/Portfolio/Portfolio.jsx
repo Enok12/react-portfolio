@@ -135,7 +135,7 @@ const Portfolio = () => {
         {
           data.map(({ id, image, title, github, desc,techstack }) => {
             return (
-              <div>
+              
                 <article key={id} className='portfolio__item' onClick={() => ModalComponent({ id, image, title, github, desc,techstack })}>
                   <div className="portfolio__item-image">
                     <img src={image} alt="" />
@@ -149,12 +149,7 @@ const Portfolio = () => {
                     {/* <a href={demo} className='btn btn-primary' target='_blank'>Live Demo</a> */}
                   </div>
                 </article>
-
-
-
-              </div>
-
-
+                
             )
 
           })
@@ -164,17 +159,17 @@ const Portfolio = () => {
 
       <Modal isOpen={modelisOpen} className="" closeTimeoutMS={300} style={customStyles} 
            shouldCloseOnOverlayClick={true} onRequestClose={closemodal} >
-        <h2 className='modal-color-text'>{mdata.title}</h2>
+        <h2 className='modal-heading'>{mdata.title}</h2>
         <div className='modal-main-container'>
           <div className='modal-image'>
             <img src={mdata.image} alt="" />
           </div>
           <div>
-            <h2 className='modal-h2'>Details :</h2>
-            <p className='modal-color-text'>{mdata.desc}</p>
+            <h2 className='modal-heading'>Details :</h2>
+            <p className='modal-p'>{mdata.desc}</p>
 
-            <h2 className='modal-h2'>Technologies :</h2>
-            <p className='modal-color-text'>{mdata.techstack}</p>
+            <h2 className='modal-heading'>Technologies :</h2>
+            <p className='modal-p'>{mdata.techstack}</p>
           </div>
 
         </div>

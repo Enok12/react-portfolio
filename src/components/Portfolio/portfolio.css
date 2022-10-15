@@ -128,6 +128,13 @@ align-items: center;
         gap: 2%;
     }
 
+    .modal-heading{
+        font-size: 1rem !important;
+    }
+    
+    .modal-p{
+        font-size: 0.75rem !important;
+    }
 }
 
 
