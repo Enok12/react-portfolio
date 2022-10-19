@@ -9,22 +9,57 @@ import Footer from './components/Footer/Footer'
 
 import './index.css'
 import Services from './components/Services/Services'
+import { useEffect, useState } from 'react'
+import HashLoader from "react-spinners/HashLoader";
+
 
 function App() {
 
-  return (
-     <>
-      <Header />
-      <Nav />
-      <About />
-      <Experience />
-      <Services />
-      <Portfolio />
-      <Testimonials />
-      <Contact />
-      <Footer />
+  const [loading, setloading] = useState(false)
 
-     </>
+  useEffect(() => {
+    setloading(true)
+    setTimeout(() => {
+      setloading(false)
+
+    }, 5000)
+  }, [])
+
+  return (
+    <>
+
+      {
+        loading ?
+          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
+            <HashLoader
+              color={'#4db5ff'}
+              loading={loading}
+              size={150}
+              speedMultiplier={1.7}
+              aria-label="Loading Spinner"
+              data-testid="loader"
+            />
+          </div>
+
+
+          : 
+          
+          <>
+            <Header />
+            <Nav />
+            <About />
+            <Experience />
+            <Services />
+            <Portfolio />
+            <Testimonials />
+            <Contact />
+            <Footer />
+          </>
+      }
+
+
+
+    </>
   )
 }
 
