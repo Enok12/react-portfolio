@@ -35,7 +35,7 @@ function App() {
               color={'#4db5ff'}
               loading={loading}
               size={150}
-              speedMultiplier={2}
+              speedMultiplier={1.7}
               aria-label="Loading Spinner"
               data-testid="loader"
             />
