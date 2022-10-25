@@ -11,14 +11,17 @@ import './index.css'
 import Services from './components/Services/Services'
 import { useEffect, useState } from 'react'
 import HashLoader from "react-spinners/HashLoader";
+import { motion } from "framer-motion";
+import ME from './assets/unnamed.png'
+
+
 
 
 function App() {
 
-  const [loading, setloading] = useState(false)
+  const [loading, setloading] = useState(true)
 
   useEffect(() => {
-    setloading(true)
     setTimeout(() => {
       setloading(false)
 
@@ -30,15 +33,41 @@ function App() {
 
       {
         loading ?
-          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh' }}>
-            <HashLoader
-              color={'#4db5ff'}
-              loading={loading}
-              size={150}
-              speedMultiplier={1.7}
-              aria-label="Loading Spinner"
-              data-testid="loader"
-            />
+          <div style={{ height: '100vh' }}>
+             <motion.div
+        className="box"
+        animate={{
+          scale: [1, 1.02, 1.02, 1, 1],
+        }}
+        transition={{
+          duration: 1,
+          ease: "easeInOut",
+          times: [0, 0.2, 0.5, 0.8, 1],
+          repeat: Infinity,
+        }}
+      >
+        <div>
+          <img src={ME} alt="" />
+        </div>
+
+      </motion.div>
+
+      <div className='loader-info'>
+        <h1>Enok Dilshan</h1>
+        <h5>Full Stack Web Developer</h5>
+      </div>
+      <br />
+      <br />
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <HashLoader
+          color={'#4db5ff'}
+          loading={loading}
+          size={50}
+          speedMultiplier={1.7}
+          aria-label="Loading Spinner"
+          data-testid="loader"
+        />
+      </div>
           </div>
 
 
