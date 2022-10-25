@@ -33,7 +33,7 @@ function App() {
 
       {
         loading ?
-          <div style={{ height: '100vh' }}>
+          <div style={{ height: '100vh',overflowY:'hidden' }}>
              <motion.div
         className="box"
         animate={{
