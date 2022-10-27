@@ -36,13 +36,21 @@ function App() {
       {
         loading ?
 
-        //Profile Picture
-          <div style={{ height: '100vh', overflowY: 'hidden' }}>
+          //Profile Picture
+          <div style={{ height: '100vh', overflowY: 'hidden', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
             <motion.div
               className="box"
               animate={{
                 scale: [1, 1.02, 1.02, 1, 1],
+                boxShadow: [
+                  `0 0 18.2rem #fff,0 0 .2rem #fff,0 0 2rem #4db5ff,0 0 0.8rem #5fb7f6,0 0 2.8rem #71b8eb,inset 0 0 1.3rem #89c0e8 `,
+                  `0 0 14.2rem #fff,0 0 .2rem #fff,0 0 2rem #4db5ff,0 0 0.8rem #5fb7f6,0 0 2.8rem #71b8eb,inset 0 0 1.3rem #89c0e8 `,
+                  `0 0 12.2rem #fff,0 0 .2rem #fff,0 0 2rem #4db5ff,0 0 0.8rem #5fb7f6,0 0 2.8rem #71b8eb,inset 0 0 1.3rem #89c0e8 `,
+                  `0 0 10.2rem #fff,0 0 .2rem #fff,0 0 2rem #4db5ff,0 0 0.8rem #5fb7f6,0 0 2.8rem #71b8eb,inset 0 0 1.3rem #89c0e8 `,
+                  `0 0 8.2rem #fff,0 0 .2rem #fff,0 0 2rem #4db5ff,0 0 0.8rem #5fb7f6,0 0 2.8rem #71b8eb,inset 0 0 1.3rem #89c0e8 `
+                ],
               }}
+
               transition={{
                 duration: 1,
                 ease: "easeInOut",
@@ -55,6 +63,7 @@ function App() {
               </div>
 
             </motion.div>
+            <br />
 
             {/* Basic Information */}
             <div className='loader-info'>

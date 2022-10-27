@@ -168,10 +168,10 @@ img{
   width: 25rem;
   height: 25rem;
   position: relative;
-  left: calc(50% - 13rem);
   margin-top: 4rem;
   border-radius: 15rem;
   overflow: hidden;
+  
 }
 
 .loader-info{
@@ -179,4 +179,14 @@ img{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+
+/* ======================== MEDIA QUERIES (SMALL DEVICES) ================ */
+@media screen and (max-width:600px){
+ 
+  .box {
+    width: 20rem;
+    height: 20rem;
+  }
 }
