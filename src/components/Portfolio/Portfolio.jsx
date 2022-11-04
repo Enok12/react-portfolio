@@ -42,7 +42,8 @@ const data = [
     title: 'React Portfolio Project (React JS, CSS)',
     github: 'https://github.com/Enok12/react-portfolio',
     desc: 'Check out my Portfolio Project which is one the First React Projects developed by me. This project will showcase about Myself, Skills and Experience. As technologies React, SwiperJS and EmailJS are used along with pure CSS stylings',
-    techstack:'ReactJS, CSS'
+    techstack:'ReactJS, CSS',
+    demo:'https://react-portfolio-en.netlify.app'
   },
   {
     id: 2,
@@ -59,7 +60,8 @@ const data = [
     title: 'Facebook Clone (Laravel, Vue, Tailwind, TDD)',
     github: 'https://github.com/Enok12/laravel-facebook_clone',
     desc: 'This is a Facebook Clone Project and also considered as a practise project for Tailwind CSS and Test Driven Development. It uses technologies such as Laravel, VueJS and Tailwind CSS',
-    techstack:'Laravel, Vue, Tailwind'
+    techstack:'Laravel, Vue, Tailwind',
+    demo:'https://laravel-facebook-clone.herokuapp.com/'
 
   },
   {
@@ -133,7 +135,7 @@ const Portfolio = () => {
 
 
         {
-          data.map(({ id, image, title, github, desc,techstack }) => {
+          data.map(({ id, image, title, github, desc,techstack,demo }) => {
             return (
               
                 <article key={id} className='portfolio__item' onClick={() => ModalComponent({ id, image, title, github, desc,techstack })}>
@@ -146,7 +148,9 @@ const Portfolio = () => {
                   </div>
                   <div className="portfolio__item-cta">
                     <a href={github} className='btn' target='_blank'>Github</a>
-                    {/* <a href={demo} className='btn btn-primary' target='_blank'>Live Demo</a> */}
+                    {
+                      demo ? <a href={demo} className='btn btn-primary' target='_blank'>Live Demo</a>: null
+                    }
                   </div>
                 </article>
                 
