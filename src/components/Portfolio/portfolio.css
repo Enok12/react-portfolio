@@ -75,6 +75,10 @@ align-items: center;
     height: 100%;
 }
 
+.mobile-slider-portfolio{
+    display: none !important;
+}
+
 
 /* ======================== MEDIA QUERIES (MEDIUM DEVICES) ================ */
 @media screen and (max-width:1024px) {
@@ -101,6 +105,18 @@ align-items: center;
         display: grid;
         grid-template-columns: 1fr ;
         gap: 2%;
+    }
+
+    .mobile-slider-portfolio{
+        display: block !important;
+    }
+
+    .mobile-slider-portfolio .portfolio__item-desc{
+        display: none;
+    }
+
+    .portfolio__container{
+        display: none;
     }
 }
 
