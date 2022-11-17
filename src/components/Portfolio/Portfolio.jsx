@@ -9,6 +9,17 @@ import IMG6 from '../../assets/portfolio6.jpg'
 import IMG7 from '../../assets/portfolio7.webp'
 import Modal from 'react-modal'
 
+
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+
+// import required modules
+import { EffectCoverflow, Pagination, Mousewheel, Autoplay } from "swiper";
+
 const customStyles = {
   overlay:{
     zIndex :1020,
@@ -160,6 +171,74 @@ const Portfolio = () => {
         }
 
       </div>
+
+      <div className='container logo-swiper mobile-slider-portfolio'>
+        <Swiper
+          effect={"coverflow"}
+          centeredSlides={true}
+          loop={true}
+          breakpoints={{
+            // when window width is >= 640px
+            640: {
+              slidesPerView: 1,
+            },
+            // when window width is >= 768px
+            768: {
+              slidesPerView: 3,
+            },
+          }}
+          // mousewheel={true}
+          coverflowEffect={{
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+          }}
+          autoplay={{
+            delay: 5000,
+            disableOnInteraction: false,
+          }}
+          
+          
+
+          modules={[EffectCoverflow, Pagination, Mousewheel, Autoplay]}
+          className="mySwiper"
+        >
+
+          {
+            data.map(({ id, image, title, github, desc,techstack,demo }) => {
+              return (
+                <SwiperSlide key = {id}>
+                 <article key={id} className='portfolio__item' onClick={() => ModalComponent({ id, image, title, github, desc,techstack })}>
+                    <div className="portfolio__item-image">
+                      <img src={image} alt="" />
+                    </div>
+                    <h3>{title}</h3>
+                    <div className='portfolio__item-desc'>
+                      {desc.slice(0,150)}.......
+                    </div>
+                    <div className="portfolio__item-cta">
+                      <a href={github} className='btn' target='_blank'>Github</a>
+                      {
+                        demo ? <a href={demo} className='btn btn-primary' target='_blank'>Live Demo</a>: null
+                      }
+                    </div>
+                  </article>
+                </SwiperSlide>
+                  
+                  
+              )
+  
+            })
+          }
+
+                
+
+        </Swiper>
+      </div>
+
+      <h2> </h2>
 
       <Modal isOpen={modelisOpen} className="" closeTimeoutMS={300} style={customStyles} 
            shouldCloseOnOverlayClick={true} onRequestClose={closemodal} >
