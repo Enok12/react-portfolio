@@ -13,6 +13,8 @@ import './index.css'
 import { useEffect, useState } from 'react'
 import HashLoader from "react-spinners/HashLoader";
 import { motion } from "framer-motion";
+import Snowfall from 'react-snowfall'
+
 
 import ME from './assets/unnamed.png'
 
@@ -36,8 +38,18 @@ function App() {
       {
         loading ?
 
+        
           //Profile Picture
           <div style={{ height: '100vh', overflowY: 'hidden', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+            
+            <Snowfall snowflakeCount={50}
+              style={{
+                position: 'fixed',
+                width: '100vw',
+                height: '100vh',
+              }}
+            />
+
             <motion.div
               className="box"
               animate={{
@@ -91,6 +103,14 @@ function App() {
           :
 
           <>
+            <Snowfall snowflakeCount={50}
+              style={{
+                position: 'fixed',
+                width: '100vw',
+                height: '100vh',
+              }}
+            />
+
             <Header />
             <Nav />
             <About />
