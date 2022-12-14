@@ -24,6 +24,8 @@ import ME from './assets/unnamed.png'
 function App() {
 
   const [loading, setloading] = useState(true)
+  const [snowfall, setsnowfall] = useState(false)
+
 
   useEffect(() => {
     setTimeout(() => {
@@ -32,23 +34,42 @@ function App() {
     }, 5000)
   }, [])
 
+  const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+  const date = new Date();
+  let current_month_name = month[date.getMonth()];
+
+  useEffect(() => {
+    current_month_name === "December" ? setsnowfall(true) : setsnowfall(false)
+    console.log(current_month_name);
+  }, [])
+
   return (
     <>
 
       {
         loading ?
 
-        
+
           //Profile Picture
           <div style={{ height: '100vh', overflowY: 'hidden', display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-            
-            <Snowfall snowflakeCount={50}
-              style={{
-                position: 'fixed',
-                width: '100vw',
-                height: '100vh',
-              }}
-            />
+
+            {/* SNOWFALL CONTROL */}
+            {
+              snowfall ?
+
+                <Snowfall snowflakeCount={50}
+                  style={{
+                    position: 'fixed',
+                    width: '100vw',
+                    height: '100vh',
+                  }}
+                />
+
+                :
+                console.log("THE MONTH IS NOT DECEMBER. SNOWFALL NOT ACTIVE")
+            }
+
 
             <motion.div
               className="box"
@@ -103,13 +124,22 @@ function App() {
           :
 
           <>
-            <Snowfall snowflakeCount={50}
-              style={{
-                position: 'fixed',
-                width: '100vw',
-                height: '100vh',
-              }}
-            />
+
+             {/* SNOWFALL CONTROL */}
+             {
+              snowfall ?
+
+                <Snowfall snowflakeCount={50}
+                  style={{
+                    position: 'fixed',
+                    width: '100vw',
+                    height: '100vh',
+                  }}
+                />
+
+                :
+                console.log("THE MONTH IS NOT DECEMBER. SNOWFALL NOT ACTIVE")
+            }
 
             <Header />
             <Nav />
